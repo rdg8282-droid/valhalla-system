@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #000 url('lobo-azul.jpeg') center center / contain no-repeat fixed;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .22);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 18px;
+}
+
+.card {
+  background: rgba(0, 0, 0, .82);
+  border: 1px solid rgba(0, 140, 255, .55);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 0 35px rgba(0, 120, 255, .25);
+}
+
+.card h1 {
+  color: #fff;
+}
+
+.card p {
+  color: #d7dce2;
+}
+
+label {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  margin: 16px 0 7px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #4b5967;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #111;
+  color: #fff;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #89939e;
+}
+
+.loc {
+  margin-top: 18px;
+  padding: 14px;
+  background: #090909;
+  border-radius: 12px;
+  border: 1px solid #263747;
+}
+
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 13px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.loc button {
+  background: #111;
+  color: #fff;
+  border: 1px solid #168cff;
+}
+
+.send {
+  width: 100%;
+  margin-top: 22px;
+  background: #0b83ff;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 0 16px rgba(0, 130, 255, .35);
+}
+
+#estado {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #aeb8c2;
+}
+
+.small {
+  font-size: 13px;
+  color: #aeb8c2;
+}
+
+.privacy {
+  text-align: center;
+  font-size: 12px;
+  color: #8f9aa5;
+  margin-top: 18px;
+}
+
+/* Diseños para pantallas chicas */
+@media (max-width: 600px) {
+  .wrap {
+    margin: 10px auto;
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  body {
+    background-size: cover;
+    background-position: center top;
+  }
+}

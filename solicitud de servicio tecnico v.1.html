@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solicitud de Servicio Técnico</title>
+
+<link rel="icon" href="valhallasystem.jpeg" type="image/png">
+
+<link rel="stylesheet" href="cilindrinho (1).css">
+
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>🔧 Solicitud de servicio técnico</h1>
+    <p>Completá los datos y enviá la solicitud directamente por WhatsApp.</p>
+
+    <form id="form">
+      <label>Nombre *</label>
+      <input id="nombre" required>
+
+      <label>Teléfono *</label>
+      <input id="telefono" type="tel" required>
+
+      <label>Servicio *</label>
+      <select id="servicio" required>
+        <option value="">Seleccionar</option>
+        <option>PC / Notebook</option>
+        <option>Cámaras CCTV</option>
+        <option>Redes / Internet</option>
+        <option>UPS / Fuentes</option>
+        <option>Alarmas</option>
+        <option>Otro</option>
+      </select>
+
+      <label>Zona *</label>
+      <input id="zona" placeholder="Ej.: Merlo" required>
+
+      <label>Problema *</label>
+      <textarea id="problema" rows="5" required placeholder="Describí el problema"></textarea>
+
+      <button type="button" id="gps">📍 Obtener mi ubicación</button>
+      <div id="estado">Ubicación no obtenida</div>
+
+      <label>Foto del problema</label>
+      <input id="foto" type="file" accept="image/*">
+
+      <label>Video del problema</label>
+      <input id="video" type="file" accept="video/*">
+
+      <button class="send" type="submit">📲 ENVIAR SOLICITUD POR WHATSAPP</button>
+    </form>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
